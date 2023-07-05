@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:nisum
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+application:
+  contract:
+    user:
+      email: "^[a-z0-9](\\.?[a-z0-9]){5,}@g(oogle)?mail\\.com$" #Minimum six characters, can use a dot before @ and ending with google.com or gmail.com
+      password: "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$" #Minimum eight characters, at least one letter and one number
+  jwt:
+    public-key: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3vCByLwF3VzbhBPjqRUZVB+XtTWdcUXF5hmDc+o9QbG5MfXk25bGuelPhZbdno6x5/fd5oH03C9ZloztDmIqEKgy0ESzEvw7ZNz9dvmPhH2p1WuDambF4IVGe9BVwDJsHb6GIHCwyq0G3ETP/B8xNu/+nQc7pMZ9sHVXGygKgVfHNBOD6k0rrtA+SjDuBFNKVqvVjIMZvlBEZXLnzXNpyxrr5HTSxaTBWACSSQo6Ufjq3fgpmOvp7KO2m38SjMh5elCoEpphxbL4mfWizlQvN9FO2z5eB71P5pwCUvdsnZOT5oDqw3XVmkETnapfWtwoQ3R5SH7kghm+fS1IUrlhSwIDAQAB"
+    private-key: "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDe8IHIvAXdXNuEE+OpFRlUH5e1NZ1xRcXmGYNz6j1Bsbkx9eTblsa56U+Flt2ejrHn993mgfTcL1mWjO0OYioQqDLQRLMS/Dtk3P12+Y+EfanVa4NqZsXghUZ70FXAMmwdvoYgcLDKrQbcRM/8HzE27/6dBzukxn2wdVcbKAqBV8c0E4PqTSuu0D5KMO4EU0pWq9WMgxm+UERlcufNc2nLGuvkdNLFpMFYAJJJCjpR+Ord+CmY6+nso7abfxKMyHl6UKgSmmHFsviZ9aLOVC830U7bPl4HvU/mnAJS92ydk5PmgOrDddWaQROdql9a3ChDdHlIfuSCGb59LUhSuWFLAgMBAAECggEAR8znz7GWpfOJE2Ggec08yhYesxLgcSHKmc/vwT5YmjbV8VxDZ+GIgUm9/cVX/P/yFkaDJgEGzn9FeDJNCsvcxl6VdvQZRG0N5+8whsfbTA14zC6DNZqB8kyaJbg0VeEnZvD8m6gPmEbfpcNXxNh67jmfJA23TNtMka9I7YsYzwzPOvO4ps0Q4s1zi8wiFQ6n1uSDPFffH/8r3JY8sVrvq+KwoJkomIi5uteTaA48IoRpn7R4TWcc6tnNeJGYtmqg3/rvssWoQXjtFwq66Df7ZDw9mvEVVSjKPPYsyvgfld880IMgPyIDWBmxyEeb5Wg/w5SAC/PTvqVaMu2STTWzkQKBgQD2hEmbTz3pE75lnv4HGthG6h0mFoMoponSFNvwAwB3cdA/fHvsaSuWm8rE6CCSC2x/6YHQk9nhRuzBcGhgTsVdHeKufy9DgT2KAph6SUZ/PE38xtwBq8j1QLF7ycxJJNOZKtEgaAlR6WFwsI1jTxfzuQBTVG5I3YgC2hKCARstGQKBgQDnhAduGYdctU/kd4jY5q6V9MIVzfGKEs+a/DWVWOei6Hp9mRuuuw+bnCNjTj0pNNibwmHAznMxVufq0Wune+N2qe8jGInaGkj8VuoOyIbSPkxFPso0BCpoI2Hc0UZGm8eZnBeaTNeRh0J2WoiNOd2jElDh8UCnQaJshLNmMIfqAwKBgC2EjabMwey4hY50Bgm/zjGB5vHydDNcVNRin524oCxt6nrefG9RmAfOKmmjRuhQja8sqZiexDtRgkPRgqRNxymDbCi2OT7orTk/c3IY95hkxS2odlUkqA2I7Xyi7UKQNzXv7v9h1l62jhRltSWiJBUPktzQGTEBHq0QIRy6IY95AoGAE0J8i8A77o520v7Ot5yZMYhnDQFQ8reV5cLNglsfCgJlDkXKc8LEDaHzn7NGi0MGMg79qtiB5LziFjrNxeUciyaf6j+EWEyPfc6NMiWkcaEVHz2V/LXMAVXQMlqGiiEzfafqnr99v3GNKeNmMLl7orFHYUR8qG1hYb24XuvyopkCgYEA3ThYJnSr4+Hmr5TptEnXKKyNuXh+QKFJwyz1hckJCJ5dQMwrTAbwlQUvnWpHGJ/5ZOqctGw3rOPEcIxJazBXRZR2pf80YjVLRHrARlT/QsKOraoQfpSXpEkISDhmJk9+3xtYZj0sIXuEMqWIu3r6U9X8606Q/rPtRZo8kwtNhg4="
+    expiration: 20
