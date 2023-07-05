@@ -67,3 +67,6 @@ curl --location 'http://localhost:8080/v1/users/register' \
     "active": false
 }
 ```
+
+## DIAGRAM
+![Diagram](deliveries/nisum.drawio.png)
